@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cal.css">
+    <title>calculator</title>
+</head>
+<body>
+    <div id="head">
+        <h1>ماشین حساب معمولی</h1>
+    </div>
+    <div id="calculator">
+        <input type="text" id="namayeshgar" readonly>
+        <div id="buttons">
+        <button onclick="safheNamayesh('7')">7</button>
+        <button onclick="safheNamayesh('8')">8</button>
+        <button onclick="safheNamayesh('9')">9</button>
+        <button onclick="safheNamayesh('*')">x</button>
+        <button onclick="safheNamayesh('4')">4</button>
+       <button onclick="safheNamayesh('5')">5</button>
+        <button onclick="safheNamayesh('6')">6</button>
+        <button onclick="safheNamayesh('/')">/</button>
+        <button onclick="safheNamayesh('1')">1</button>
+        <button onclick="safheNamayesh('2')">2</button>
+        <button onclick="safheNamayesh('3')">3</button>
+        <button onclick="safheNamayesh('+')">+</button>
+        
+        <button onclick="pakKardan()">c</button>
+        <button onclick="safheNamayesh('0')">0</button>
+        <button onclick="safheNamayesh('-')">-</button>
+        <button onclick="mohasebe()">=</button>
+        </div>
+
+    </div>
+    <script src="cal.js"></script>
+</body>
+</html>
