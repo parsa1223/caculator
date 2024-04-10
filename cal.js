@@ -8,6 +8,8 @@ function pakKardan(){
 
 }
 function mohasebe (){
+    
+
 try{
     namayeshgar.value=eval(namayeshgar.value);
 }catch(error) {
