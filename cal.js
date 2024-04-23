@@ -1,18 +1,24 @@
-let namayeshgar=document.getElementById('namayeshgar');
+// let namayeshgar=document.getElementById('namayeshgar');
 function safheNamayesh(value){
-    namayeshgar.value += value;
+    document.getElementById('namayeshgar').value += value;
 
 }
 function pakKardan(){
-    namayeshgar.value="";
+   document.getElementById('namayeshgar').value="";
 
 }
-function mohasebe (){
-    
+function bejayeEval (xex){
+    const mohaseb=new Function('return'+ xex);
 
 try{
-    namayeshgar.value=eval(namayeshgar.value);
+    const result=mohaseb();
+     return result
 }catch(error) {
-    namayeshgar.value='Error'
+    return 'Error';
 }
+}
+function mohasebe (){
+    let input=document.getElementById('namayeshgar').value;
+let result=bejayeEval(input);
+document.getElementById('namayeshgar').value=result;
 }
