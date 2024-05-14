@@ -9,42 +9,25 @@ function pakKardan(){
 }
 function mohasebe (){
     const input=document.getElementById('namayeshgar').value;
-const operators=['+','-','*','/'];
-let currentNumber='';
-let operator='+';
-let result='0';
-for(let char of input){
-    if(operators.includes(char)){
-        result =bejayeEval(result,parseFloat(currentNumber),operator);
-        operator=char;
-        currentNumber='';
-    } else {
-        currentNumber+=char;
-    }
-}
-if(currentNumber!==''){
-    result=bejayeEval(result,parseFloat(currentNumber),operator);
-} else{
-    document.getElementById('namayeshgar').value=result;
-}
+    let result=bejayeEval(input);
+    input=result;
 }
 
-function bejayeEval (a,b,operator){
-    switch (operator){
+function bejayeEval (input){
+    let operands= input.split(/[\+\-\*\/]/);
+    let operator=input.match(/[\+\-\*\/]/)[0];
+    
+    let num1=parseFloat(operands[0]);
+    let num2=parseFloat(operands[1]);
+
+    switch(operator){
         case '+':
-            return a + b;
-            case '-':
-                return a - b;
-                case '*':
-                    return a * b;
-                    case '/':
-                        if(b===0){
-                            return 'Error'
-                        }
-                        return a/b;
-                        default :
-                        return 'Error'
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        case '/':
+            return num1 / num2;
     }
-   
-   
-}
+};
