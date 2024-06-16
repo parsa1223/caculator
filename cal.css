@@ -6,6 +6,9 @@
 #calculator{
     width: 300px;
     margin: 50px auto;
+    padding: 30px;
+    border-radius: 40px;
+    background-color: #272727;
 }
 #display {
     width: 100%;
@@ -14,9 +17,15 @@
 }
 #buttons{
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(4,1fr);
     grid-gap: 5px;
+    width: 100%;
 }
 button{
     padding: 10px;
+}
+#namayeshgar{
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 10px;
 }
